@@ -13,17 +13,17 @@
 .page {
   min-inline-size: 300px;
   min-block-size: 100dvb;
-  color:black;
-  font-family:var(--page-main-ff);
-  background-size:cover ;
+  color: black;
+  font-family: var(--page-main-ff);
+  background-size: cover;
   background-attachment: fixed;
-  background-image:var(--page-background);
+  background-image: var(--page-background);
   align-items: center;
 }
 
-.header{
-  margin:100px auto 100px;
-  display:grid;
+.header {
+  margin: 100px auto 100px;
+  display: grid;
   justify-items: center;
   justify-content: center;
   font-family: var(--page-support-ff);
@@ -32,91 +32,91 @@
   background-color: white;
 }
 
-.page-title{
-  font-size:65px;
+.page-title {
+  font-size: 65px;
   line-height: 65px;
-  margin-top:130px;
+  margin-top: 130px;
   margin-bottom: 20px;
 }
 
-.page-subtitle{
+.page-subtitle {
   font-size: 23px;
-  margin-bottom:130px ;
+  margin-bottom: 130px;
 }
 
-.main{
+.main {
   display: grid;
   justify-items: center;
   justify-content: center;
-  gap:60px;
-  padding-bottom:100px;
+  gap: 60px;
+  padding-bottom: 100px;
 }
 
-.card{
-  border:2px solid black;
+.card {
+  border: 2px solid black;
   width: 696px;
   background-color: white;
   margin: auto;
 }
 
-.cards-list{
+.cards-list {
   display: grid;
-  gap:55px;
+  gap: 55px;
 }
 
-.card__title{
+.card__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.78px;
 }
 
-.card-header{
+.card-header {
   border-block-end: 2px solid var(--text-color, #000000);
   padding: 5px 10px;
 }
 
-.card-img-all{
+.card-img-all {
   position: relative;
   overflow: hidden;
 }
 
-.card-img-html{
+.card-img-html {
   position: absolute;
   z-index: 1;
   color: black;
   font-family: var(--page-support-ff);
-  font-size:14px ;
-  text-shadow:0 0 1px var(--shadow);
+  font-size: 14px;
+  text-shadow: 0 0 1px var(--shadow);
   padding-top: 25px;
-  right:15px ;
+  right: 15px;
 }
 
-.card-content{
-  display:grid;
-  font-size:18px;
-  gap:30px;
+.card-content {
+  display: grid;
+  font-size: 18px;
+  gap: 30px;
   line-height: 21px;
-  padding-top:25px ;
+  padding-top: 25px;
   padding-left: 25px;
-  padding-right:25px ;
+  padding-right: 25px;
   padding-bottom: 0px;
 }
 
-.card-bottom{
-  display:flex;
+.card-bottom {
+  display: flex;
   justify-content: end;
-  padding:25px;
+  padding: 25px;
 }
 
-.card__icon-button{
-  border:1px solid transparent;
+.card__icon-button {
+  border: 1px solid transparent;
   background-color: transparent;
   cursor: pointer;
 }
 
-.card__like-button{
+.card__like-button {
   position: relative;
-  border:2px solid black;
+  border: 2px solid black;
   padding: 10px 35px;
   cursor: pointer;
   font-size: 14px;
@@ -125,29 +125,29 @@
   background-color: transparent;
 }
 
-.like-icon{
+.like-icon {
   height: 35px;
   width: 40px;
 }
 
-.button__text{
-  color:var(--text-color);
+.button__text {
+  color: var(--text-color);
   mix-blend-mode: difference;
 }
 
-.button-icon{
+.button-icon {
   color: var(--text-color);
   mix-blend-mode: difference;
   height: 30px;
 }
 
-.button-save{
+.button-save {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:10px;
-  padding:15px 25px;
+  gap: 10px;
+  padding: 15px 25px;
 }
 
 .filter-brightness {
@@ -178,9 +178,9 @@
   filter: grayscale(50%) blur(5px) contrast(80%);
 }
 
-.button{
+.button {
   position: relative;
-  border:2px solid black;
+  border: 2px solid black;
   padding: 10px 35px;
   cursor: pointer;
   font-size: 14px;
@@ -191,18 +191,18 @@
   overflow: hidden;
 }
 
-.button:focus{
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--like-cc);
 }
 
-.button:focus-visible{
+.button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--like-cc);
 }
 
-.button::before{
-  content: '';
+.button::before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -218,7 +218,7 @@
   transform: scaleX(1);
 }
 
-.modal{
+.modal {
   border: 2px solid var(--like-cc);
   padding: 25px 30px;
   max-inline-size: 355px;
@@ -226,51 +226,50 @@
   color: var(--like-cc);
 }
 
-.modal[open]{
+.modal[open] {
   display: grid;
-  grid-template-rows:repeat(2, min-content);
+  grid-template-rows: repeat(2, min-content);
   gap: 30px;
 }
 
-.modal-window{
+.modal-window {
   display: flex;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
-.modal::backdrop{
+.modal::backdrop {
   opacity: 0.5;
   background: var(--like-cc);
 }
 
-.modal-window-button{
+.modal-window-button {
   inline-size: 100%;
 }
 
-.save-icon{
+.save-icon {
   width: 21px;
   height: 21px;
 }
 
-.save-icon-ok{
+.save-icon-ok {
   width: 39px;
   height: 39px;
   flex-shrink: 0;
 }
 
-
-@media (width <= 375px){
-  .button-save{
+@media (width <= 375px) {
+  .button-save {
     flex-direction: column;
     width: 306px;
   }
 
-  .save-icon{
+  .save-icon {
     block-size: 28px;
     inline-size: 28px;
   }
 
-  .modal{
+  .modal {
     max-width: 341px;
     padding: 30px 35px 30px 40px;
   }
@@ -278,10 +277,10 @@
 
 /* не понимаю почему при уменьшении ширины основной контент прижимается к левой части*/
 
-
-
-
-
-
-
-
+@supports {
+  .card-img-html {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color, #ffffff);
+    text-stroke: 1px var(--bg-color, #ffffff);
+  }
+}
