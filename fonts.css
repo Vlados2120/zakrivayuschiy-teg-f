@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Inter";
+    font-weight: 400 785;
+    font-display: auto;
+    src: url("Inter-Variable.woff2") format("woff2 supports variations"),
+    url("Inter-Variable.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "PressStart2P";
+    src: url("PressStart2P-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: auto;
+}
