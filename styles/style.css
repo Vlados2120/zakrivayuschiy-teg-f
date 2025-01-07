@@ -12,7 +12,7 @@
 
 .page {
   min-inline-size: 300px;
-  min-block-size: 100dvh;
+  min-block-size: 100dvb;
   color: black;
   font-family: var(--page-main-font-family);
   background-size: cover;
@@ -323,8 +323,6 @@
     margin-bottom: 120px;
   }
 }
-
-/* не понимаю почему при уменьшении ширины основной контент прижимается к левой части*/
 
 @supports {
   .card-img-html {
