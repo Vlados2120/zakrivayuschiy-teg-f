@@ -11,17 +11,17 @@
 */
 
 .like-icon .main-body {
-  fill: var(--bg-color);
+  fill: transparent;
   transition: fill 0.3s linear;
 }
 
 .like-icon .contour {
-  fill: var(--like-cc);
+  fill: var(--like-contour-color);
   transition: fill 0.1s linear;
 }
 
 .like-icon .core {
-  fill: var(--bg-color);
+  fill: transparent;
   transition: fill 0.3s linear 0.03s;
 }
 
@@ -34,37 +34,37 @@
 }
 
 .like-icon:active .core {
-  fill: var(--like-sc);
+  fill: var(--like-sparks-color);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  fill: var(--like-sc);
+  fill: var(--like-sparks-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover .core {
-  fill: var(--like-cc);
+  fill: var(--like-contour-color);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--like-cc);
+  fill: var(--like-contour-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--like-sc);
+  fill: var(--like-sparks-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--like-sc);
+  fill: var(--like-sparks-color);
   transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--like-sc);
+  fill: var(--like-sparks-color);
   transition: fill 0.3s linear;
 }
 

@@ -12,13 +12,14 @@
 
 .page {
   min-inline-size: 300px;
-  min-block-size: 100dvb;
+  min-block-size: 100dvh;
   color: black;
-  font-family: var(--page-main-ff);
+  font-family: var(--page-main-font-family);
   background-size: cover;
   background-attachment: fixed;
   background-image: var(--page-background);
   align-items: center;
+  background-color: var(--background-color);
 }
 
 .header {
@@ -26,22 +27,24 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  font-family: var(--page-support-ff);
+  font-family: var(--page-support-font-family);
   border: 2px solid black;
-  width: 696px;
-  background-color: white;
+  width: 100%;
+  max-width: 696px;
+  background-color: var(--background-color);
 }
 
 .page-title {
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7993rem + 1.4035vw, 4.0625rem);
   line-height: 65px;
   margin-top: 130px;
   margin-bottom: 20px;
 }
 
 .page-subtitle {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-bottom: 130px;
+  text-transform: uppercase;
 }
 
 .main {
@@ -54,8 +57,9 @@
 
 .card {
   border: 2px solid black;
-  width: 696px;
-  background-color: white;
+  width: 100%;
+  max-width: 696px;
+  background-color: var(--background-color);
   margin: auto;
 }
 
@@ -64,10 +68,11 @@
   gap: 55px;
 }
 
-.card__title {
+.card-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.78px;
+  padding: 5px 10px;
 }
 
 .card-header {
@@ -84,19 +89,19 @@
   position: absolute;
   z-index: 1;
   color: black;
-  font-family: var(--page-support-ff);
+  font-family: var(--page-support-font-family);
   font-size: 14px;
   text-shadow: 0 0 1px var(--shadow);
-  padding-top: 25px;
+  top: 25px;
   right: 15px;
 }
 
 .card-content {
   display: grid;
   font-size: 18px;
-  gap: 30px;
+  gap: 27px;
   line-height: 21px;
-  padding-top: 25px;
+  padding-top: 22px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 0px;
@@ -105,13 +110,14 @@
 .card-bottom {
   display: flex;
   justify-content: end;
-  padding: 25px;
+  padding: 22px;
 }
 
 .card__icon-button {
   border: 1px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
 .card__like-button {
@@ -120,9 +126,11 @@
   padding: 10px 35px;
   cursor: pointer;
   font-size: 14px;
-  font-family: var(--page-support-ff);
+  font-family: var(--page-support-font-family);
   z-index: 1;
   background-color: transparent;
+  width: 130px;
+  height: 38px;
 }
 
 .like-icon {
@@ -131,14 +139,8 @@
 }
 
 .button__text {
-  color: var(--text-color);
+  color: var(--text-color-button);
   mix-blend-mode: difference;
-}
-
-.button-icon {
-  color: var(--text-color);
-  mix-blend-mode: difference;
-  height: 30px;
 }
 
 .button-save {
@@ -181,24 +183,22 @@
 .button {
   position: relative;
   border: 2px solid black;
-  padding: 10px 35px;
+  padding: 0;
   cursor: pointer;
   font-size: 14px;
-  font-family: var(--page-support-ff);
+  font-family: var(--page-support-font-family);
   z-index: 1;
   background-color: white;
   transition: box-shadow 0.3s ease;
-  overflow: hidden;
 }
 
 .button:focus {
   outline: none;
-  box-shadow: 2px 2px 0px 0px var(--like-cc);
 }
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0px 0px var(--like-cc);
+  box-shadow: 2px 2px 0px 0px var(--like-contour-color);
 }
 
 .button::before {
@@ -208,7 +208,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: var(--like-cc);
+  background: var(--like-contour-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
@@ -219,11 +219,12 @@
 }
 
 .modal {
-  border: 2px solid var(--like-cc);
+  border: 2px solid var(--like-contour-color);
   padding: 25px 30px;
-  max-inline-size: 355px;
-  font-family: var(--page-support-ff);
-  color: var(--like-cc);
+  width: 353px;
+  height: 191px;
+  font-family: var(--page-support-font-family);
+  color: var(--like-contour-color);
 }
 
 .modal[open] {
@@ -239,8 +240,8 @@
 }
 
 .modal::backdrop {
-  opacity: 0.5;
-  background: var(--like-cc);
+  opacity: 0.75;
+  background: var(--like-contour-color);
 }
 
 .modal-window-button {
@@ -250,6 +251,9 @@
 .save-icon {
   width: 21px;
   height: 21px;
+  color: var(--text-color-button);
+  mix-blend-mode: difference;
+  height: 30px;
 }
 
 .save-icon-ok {
@@ -258,10 +262,29 @@
   flex-shrink: 0;
 }
 
+.button-save {
+  width: 335px;
+  height: 55px;
+}
+
+.button-ok {
+  text-transform: uppercase;
+}
+
+.modal-window-button {
+  padding: 10px 36px;
+}
+
+.modal-text {
+  line-height: 21px;
+}
+
 @media (width <= 375px) {
   .button-save {
     flex-direction: column;
     width: 306px;
+    height: 84px;
+    padding: 0;
   }
 
   .save-icon {
@@ -270,8 +293,34 @@
   }
 
   .modal {
-    max-width: 341px;
-    padding: 30px 35px 30px 40px;
+    width: 341px;
+    padding: 27px;
+  }
+
+  .header {
+    width: 375px;
+  }
+
+  .card {
+    max-width: 375px;
+  }
+
+  .card-img {
+    max-width: 375px;
+    max-height: 375px;
+  }
+
+  .button-ok {
+    padding: 10px 35px;
+  }
+
+  .page-title {
+    margin-top: 115px;
+    margin-bottom: 10px;
+  }
+
+  .page-subtitle {
+    margin-bottom: 120px;
   }
 }
 
@@ -280,7 +329,7 @@
 @supports {
   .card-img-html {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--bg-color, #ffffff);
-    text-stroke: 1px var(--bg-color, #ffffff);
+    -webkit-text-stroke: 1px var(--background-color, #ffffff);
+    text-stroke: 1px var(--background-color, #ffffff);
   }
 }
