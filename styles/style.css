@@ -20,6 +20,7 @@
   background-image: var(--page-background);
   align-items: center;
   background-color: var(--background-color);
+  overflow-x: hidden;
 }
 
 .header {
@@ -51,8 +52,9 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  gap: 60px;
-  padding-bottom: 100px;
+  gap: 58px;
+  padding-bottom: 105px;
+  width: 100%;
 }
 
 .card {
@@ -60,12 +62,13 @@
   width: 100%;
   max-width: 696px;
   background-color: var(--background-color);
-  margin: auto;
+  margin-inline: auto;
 }
 
 .cards-list {
   display: grid;
-  gap: 55px;
+  gap: 52px;
+  width: 100%;
 }
 
 .card-title {
@@ -111,6 +114,7 @@
   display: flex;
   justify-content: end;
   padding: 22px;
+  gap: 3px;
 }
 
 .card__icon-button {
@@ -149,7 +153,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 15px 25px;
+  padding: 15px 20px;
+  padding-top: 105px;
 }
 
 .filter-brightness {
@@ -263,7 +268,7 @@
 }
 
 .button-save {
-  width: 335px;
+  width: 335px; /* значения по макету*/
   height: 55px;
 }
 
@@ -277,6 +282,16 @@
 
 .modal-text {
   line-height: 21px;
+  text-transform: uppercase;
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+.like-icon {
+  height: 31px;
+  width: 36px;
 }
 
 @media (width <= 375px) {

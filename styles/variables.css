@@ -9,7 +9,7 @@
   --background-color: var(--white);
   --like-main-body-color: none;
   --like-contour-color: var(--black);
-  --like-sparks-color: red;
+  --like-sparks-color: #ff0000;
   --shadow: var(--white);
   --text-color-button: var(--white);
   --page-background: repeating-linear-gradient(
