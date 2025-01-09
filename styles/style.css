@@ -337,6 +337,15 @@
   .page-subtitle {
     margin-bottom: 120px;
   }
+
+  .card-img {
+    width: 100%;
+    max-width: 375px;
+  }
+
+  .card-bottom {
+    padding-right: 24px;
+  }
 }
 
 @supports {
